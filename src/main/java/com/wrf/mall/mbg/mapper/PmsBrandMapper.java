@@ -7,6 +7,9 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+/**
+* Created by Mybatis Generator on 2022/06/10
+*/
 @Mapper
 public interface PmsBrandMapper {
     long countByExample(PmsBrandExample example);

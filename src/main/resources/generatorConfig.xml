@@ -9,6 +9,14 @@
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
         <property name="javaFileEncoding" value="UTF-8"/>
+        <!--添加lombok插件配置项-->
+        <!--
+        需要自行编译LombokPlugin并加入maven仓库
+        mybatis-generator-core-version.jar 下的 org\mybatis\generator\plugins\
+        -->
+        <plugin type="com.wrf.mall.mbg.LombokPlugin">
+            <property name="hasLombok" value="true"/>
+        </plugin>
         <!--生成mapper.xml时覆盖原文件-->
         <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
         <!-- 为模型生成序列化方法-->

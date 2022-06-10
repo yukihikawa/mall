@@ -5,8 +5,17 @@ package com.wrf.mall.common.api;
  * Created by macro on 2019/4/19.
  */
 public class CommonResult<T> {
+    /**
+     * 操作码/错误码
+     */
     private long code;
+    /**
+     * 返回的信息
+     */
     private String message;
+    /**
+     * 泛型，持有返回的数据对象
+     */
     private T data;
 
     protected CommonResult() {

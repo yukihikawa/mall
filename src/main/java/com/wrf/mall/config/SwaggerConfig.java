@@ -1,6 +1,7 @@
 package com.wrf.mall.config;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties;
 import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
 import org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType;
@@ -34,6 +35,7 @@ import java.util.List;
  **/
 @EnableOpenApi
 @Configuration
+
 public class SwaggerConfig {
     @Bean
     public Docket createRestApi(){
@@ -62,6 +64,7 @@ public class SwaggerConfig {
 
     /**
      * 增加如下配置可解决Spring Boot 6.x 与Swagger 3.0.0 不兼容问题
+     * 没法autowire先不管，能用
      **/
     @Bean
     public WebMvcEndpointHandlerMapping webEndpointServletHandlerMapping(WebEndpointsSupplier webEndpointsSupplier, ServletEndpointsSupplier servletEndpointsSupplier, ControllerEndpointsSupplier controllerEndpointsSupplier, EndpointMediaTypes endpointMediaTypes, CorsEndpointProperties corsProperties, WebEndpointProperties webEndpointProperties, Environment environment) {
