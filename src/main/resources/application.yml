@@ -7,7 +7,16 @@ spring:
     username: root
     password: WRFabc123
 
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
 mybatis:
   mapper-locations:
     - classpath:mapper/*.xml
     - classpath*:com/**/mapper/*.xml
+
+
+
+
+
