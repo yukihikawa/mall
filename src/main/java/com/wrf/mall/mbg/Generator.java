@@ -1,6 +1,8 @@
 package com.wrf.mall.mbg;
 /*
-Mybatis generator生成model、mapper接口及mapper.xml
+Mybatis generator
+生成model、mapper接口及mapper.xml
+已整合
 * */
 
 import org.mybatis.generator.api.MyBatisGenerator;
